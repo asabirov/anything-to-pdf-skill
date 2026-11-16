@@ -1,10 +1,11 @@
-# everything-to-pdf
+# anything-to-pdf-skill
 
 Convert Markdown, text or code, images, local HTML or a web page to PDF.
 
-It is an agent skill for Claude Code and Codex. You ask your agent for a PDF; it
-picks a print theme and runs one Python script, which lays out your content
-as it is, without rewriting or summarizing it.
+It is an agent skill for Claude Code and Codex, with the skill name
+`everything-to-pdf`. You ask your agent for a PDF; it picks a print theme and
+runs one Python script, which lays out your content as it is, without
+rewriting or summarizing it.
 
 ![Page 1 of the bundled example, rendered with the default theme](docs/example-page-1.png)
 
@@ -14,13 +15,13 @@ renders it. The company and figures are made up.*
 ## Install
 
 ```sh
-DO_NOT_TRACK=1 npx skills add https://github.com/asabirov/everything-to-pdf/tree/v0.3.0 --skill everything-to-pdf --agent claude-code codex --global
+DO_NOT_TRACK=1 npx skills add https://github.com/asabirov/anything-to-pdf-skill/tree/v0.3.0 --skill everything-to-pdf --agent claude-code codex --global
 ```
 
 The [skills CLI](https://github.com/vercel-labs/skills) needs Node.js, npm and Git.
 `DO_NOT_TRACK=1` turns off its telemetry. To update or roll back, run the same
 command with the release you want from
-[Releases](https://github.com/asabirov/everything-to-pdf/releases).
+[Releases](https://github.com/asabirov/anything-to-pdf-skill/releases).
 
 Then give the renderer its Python environment, outside the skill folder:
 
