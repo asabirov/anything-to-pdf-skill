@@ -33,14 +33,19 @@ To get that, it turned down three things:
 
 ## Install
 
+Install the latest version:
+
 ```sh
-DO_NOT_TRACK=1 npx skills add https://github.com/asabirov/anything-to-pdf-skill/tree/v0.3.0 --skill everything-to-pdf --agent claude-code codex --global
+DO_NOT_TRACK=1 npx skills add https://github.com/asabirov/anything-to-pdf-skill --skill everything-to-pdf --agent claude-code codex --global
 ```
 
-The [skills CLI](https://github.com/vercel-labs/skills) needs Node.js, npm and Git.
-`DO_NOT_TRACK=1` turns off its telemetry. To update or roll back, run the same
-command with the release you want from
-[Releases](https://github.com/asabirov/anything-to-pdf-skill/releases).
+Update it later:
+
+```sh
+DO_NOT_TRACK=1 npx skills update everything-to-pdf --global
+```
+
+`DO_NOT_TRACK=1` turns off the telemetry of the skills CLI. The CLI needs Node.js, npm and Git.
 
 Then give the renderer its Python environment, outside the skill folder:
 
