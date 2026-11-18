@@ -12,6 +12,25 @@ rewriting or summarizing it.
 *Page 1 of [examples/monthly-finops.html](examples/monthly-finops.html) as the skill
 renders it. The company and figures are made up.*
 
+## Why it exists
+
+The skill began with [one request](https://github.com/asabirov/anything-to-pdf-skill/issues/1):
+a fast, token-efficient way to turn static HTML, such as a monthly FinOps report,
+into a themed PDF, with few dependencies and output you can trust.
+
+To get that, it turned down three things:
+
+- **An LLM rendering loop.** One deterministic command makes the PDF, which keeps
+  token use low.
+- **A browser for local files.** WeasyPrint, chosen after a comparison of five
+  engines, lays out local files with no JavaScript engine, which
+  [keeps dependencies few](https://github.com/asabirov/anything-to-pdf-skill/pull/2).
+  Chrome or Chromium runs only for web pages.
+- **WeasyPrint's default handling of assets.** On its own, WeasyPrint
+  [still writes a PDF when an asset is missing, and it fetches HTTP resources](https://github.com/asabirov/anything-to-pdf-skill/pull/2).
+  For a local input, this skill fails instead and keeps your previous PDF. It reads
+  only embedded data and files in the input's folder.
+
 ## Install
 
 ```sh
