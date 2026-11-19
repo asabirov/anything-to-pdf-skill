@@ -36,7 +36,7 @@ To get that, it turned down three things:
 Install the latest version:
 
 ```sh
-DO_NOT_TRACK=1 npx skills add https://github.com/asabirov/anything-to-pdf-skill --skill everything-to-pdf --agent claude-code codex --global
+DO_NOT_TRACK=1 npx skills add https://github.com/asabirov/anything-to-pdf-skill --skill everything-to-pdf --agent claude-code codex --global -y
 ```
 
 Update it later:
